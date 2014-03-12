@@ -27,6 +27,9 @@ PRODUCT_COPY_FILES += \
 # BT firmware
 PRODUCT_COPY_FILES += \
     device/samsung/hercules/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
+	
+# OTA ID
+otaupdater.otaid=liquidhercules
 
 # Inherit from celox-common
 $(call inherit-product, device/samsung/celox-common/celox-common.mk)
