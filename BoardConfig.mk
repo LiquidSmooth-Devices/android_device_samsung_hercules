@@ -11,12 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-# WARNING: This line must come *before* including the proprietary
-# variant, so that it gets overwritten by the parent (which goes
-# against the traditional rules of inheritance).
-
-USE_CAMERA_STUB := true
 
 # inherit from common celox
 -include device/samsung/celox-common/BoardConfigCommon.mk
@@ -24,25 +18,20 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/samsung/hercules/BoardConfigVendor.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
-
 # Assert
+TARGET_BOARD_INFO_FILE ?= device/samsung/hercules/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := SGH-T989,hercules
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_hercules_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/msm8660-common
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := sm-arm-eabi-4.7
 
-# Assert minimum baseband version
-TARGET_BOARD_INFO_FILE ?= device/samsung/hercules/board-info.txt
-
-TARGET_USERIMAGES_USE_EXT4 := true
+# Partitions
+BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776192
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 20044333056
-BOARD_FLASH_BLOCK_SIZE := 131072
+TARGET_USERIMAGES_USE_EXT4 := true
 
+# Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/hercules/bluetooth
-
