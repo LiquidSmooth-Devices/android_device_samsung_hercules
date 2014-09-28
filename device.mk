@@ -30,3 +30,13 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from celox-common
 $(call inherit-product, device/samsung/celox-common/celox-common.mk)
+
+
+# F2FS
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
+PRODUCT_COPY_FILES += \
+    device/samsung/hercules/format-system.sh:system/extras/format-system.sh
