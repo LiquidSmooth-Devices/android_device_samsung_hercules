@@ -1,7 +1,7 @@
 [
   {
-    "remote": "cm",
-    "repository": "android_device_samsung_qcom-common",
+    "remote": "gh",
+    "repository": "Hellybean/android_device_samsung_qcom-common",
     "target_path": "device/samsung/qcom-common",
     "revision": "cm-11.0"
   },
