@@ -23,9 +23,8 @@ TARGET_BOARD_INFO_FILE ?= device/samsung/hercules/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := SGH-T989,hercules
 
 # Kernel
-TARGET_KERNEL_CONFIG := uber_defconfig
+TARGET_KERNEL_CONFIG := uber_hercules_defconfig
 TARGET_GCC_VERSION_ARM := 4.7-sm
-TARGET_GCC_VERSION_AND := 4.8-sm
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
